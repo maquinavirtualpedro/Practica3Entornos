@@ -1,0 +1,62 @@
+Crea un nuevo proyecto practica3_[Nombre]. Dentro, copia este código en una clase nueva. Identifica los atributos y métodos, y describe brevemente su propósito mediante comentarios.
+class Practica3{
+    private boolean actividades_entregadas;
+    private double nota_practica;
+    private double nota_examen;
+    
+    public void imprimirNotas(){
+         System.out.println(“La nota de clase es la siguiente: ”);
+         if(actividades_entregadas){
+             System.out.println(“Se han entregado las actividades del tema.”);
+         }
+         System.out.println(“Nota de prácticas: ” + nota_practica);
+         System.out.println(“Nota de examen: “ + nota_examen);
+    }
+
+    public double calculoMedia(){
+         double media;
+         media = ((nota_practica*0.6)+(nota_examen*0.4));
+         return media;
+    }
+
+    public boolean aprobarExamen(){
+         boolean nota_minima = ((nota_practica>=5) && (nota_examen>=5));
+         boolean media_aprobada = (calculoMedia()>=5);
+         if(nota_minima && media_aprobada){
+              return true;
+         }
+         return false;
+    }
+}
+
+
+
+Crea la clase País en un nuevo fichero. Debe incluir los siguientes elementos:
+Atributos: nombre, número de habitantes, idioma oficial, extensión geográfica, continente, si es un país democrático o no. Ajusta el nombre y tipo de las variables al atributo.
+Métodos: 
+Comprobar si el número de habitantes es mayor de 100000
+Imprimir por pantalla el continente y la extensión geográfica.
+Comprobar si el nombre del continente aparece contenido el nombre del país.
+
+Añade a la clase País getters y setters para todos sus atributos. Demuestra su funcionamiento generando tres objetos con distintos valores. 
+
+Añade un constructor a la clase Practica3 planteada en el ejercicio 1 que permita inicializar el objeto con las notas ya puestas. ¿Es necesario añadirle un destructor también? Justifica tu respuesta.
+
+Una clase Java puede tener varios constructores, dependiendo de los valores con los que se quiera inicializar. Añade a la clase País los siguientes constructores:
+Un constructor que permita inicializar un objeto solo con su nombre.
+Un constructor que permita inicializar un objeto con su nombre, el idioma oficial y el continente.
+Un constructor que permita inicializar un objeto con todos los atributos.
+	Prueba los constructores en tiempo de ejecución.
+
+Añade a la clase País un atributo estático numPaises inicializada a cero. Ajusta el código de forma que permita llevar la cuenta del número de objetos de tipo País declarados.
+
+Crea un nuevo fichero llamado MiVector.java. Añade los siguientes atributos:
+Un array de enteros llamado v. Los arrays son colecciones de un tipo de dato concreto, que permiten albergar varios elementos con una sola referencia. Se declaran como tipo[] nombre.
+Un entero llamado tam que almacene el tamaño de nuestro array, inicializado por defecto a 0.
+	Añade los siguientes métodos:
+Un constructor que obtenga por parámetros el tamaño del array, y lo inicialice. La forma de inicializar un array es como nombre = new tipo [tamaño].
+Un método que devuelve un booleano con la comprobación de si el array está vacío o no. Un array está vacío si su tamaño es 0.
+Un método que permita al usuario introducir por teclado en el array tantos valores como tamaño tenga. Para ello, deberás emplear un bucle que te permita asignar a cada posición del array el valor que introduzca el usuario.
+Un método que muestre el contenido del array. Para ello, deberá recorrerse con un índice similar al del apartado anterior que pase por todos los elementos de un array.
+Un método que devuelva el tamaño del array.
+Un método que vacíe el array.
